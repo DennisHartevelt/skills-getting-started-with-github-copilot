@@ -74,6 +74,85 @@ section h3 {
   margin-bottom: 8px;
 }
 
+.participants {
+  list-style: none;
+  margin-left: 0;
+  margin-top: 6px;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.participants strong {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.participants ul {
+  list-style: none;
+  margin: 6px 0 0 0;
+  padding: 0;
+}
+
+.participants li {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #444;
+}
+
+.participant {
+  display: inline-block;
+  background: linear-gradient(135deg, #e8f0fe, #f1f8ff);
+  padding: 6px 8px;
+  border-radius: 999px;
+  border: 1px solid #dbe9ff;
+  color: #0b57d0;
+  font-weight: 600;
+}
+
+.participant-delete {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-weight: 700;
+  font-size: 14px;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.participant-delete:hover {
+  background-color: rgba(198,40,40,0.08);
+  color: #8b0000;
+}
+
+.participant-remove {
+  margin-left: 8px;
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.participant-remove:hover {
+  background: rgba(198,40,40,0.08);
+}
+
+.muted {
+  color: #888;
+  font-style: italic;
+}
+
 .form-group {
   margin-bottom: 15px;
 }
