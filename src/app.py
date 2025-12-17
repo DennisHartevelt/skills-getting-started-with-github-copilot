@@ -87,6 +87,23 @@ def root():
 def get_activities():
     return activities
 
+@app.get("/activities/{activity_name}/participants")
+def get_activity_participants(activity_name: str):
+    """Get all participants of a specific activity"""
+    
+    # Validate activity exists
+    if activity_name not in activities: 
+        raise HTTPException(status_code=404, detail="Activity not found")
+    
+    activity = activities[activity_name]
+    
+    return {
+        "activity":  activity_name,
+        "participants": activity["participants"],
+        "participant_count": len(activity["participants"]),
+        "max_participants":  activity["max_participants"],
+        "available_slots": activity["max_participants"] - len(activity["participants"])
+    }
 
 @app.post("/activities/{activity_name}/signup")
 def signup_for_activity(activity_name: str, email: str):
